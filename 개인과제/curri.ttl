@@ -1,0 +1,71 @@
+@prefix ex: <http://example.org/curriculum/> .
+@prefix res: <http://example.org/resource/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# --- 성취기준 정의 (Achievement Standards) ---
+
+ex:Standard_10KOR1_02_01 a skos:Concept ;
+    dc:identifier "10공국1-02-01" ;
+    skos:prefLabel "논증의 타당성 평가 및 재구성" ;
+    dc:description "논증의 타당성을 평가하고 자신의 관점을 바탕으로 논증을 재구성하며 다양한 글과 자료를 읽는다." ;
+    skos:broader ex:Subject_Korean .
+
+ex:Standard_10SOC1_03_03 a skos:Concept ;
+    dc:identifier "10통사1-03-03" ;
+    skos:prefLabel "화석 연료와 기후 변화" ;
+    dc:description "화석 연료 중심의 에너지 소비와 이로 인한 기후 변화가 인간 삶에 미치는 영향을 분석한다." ;
+    skos:broader ex:Subject_SocialStudies .
+
+ex:Standard_10SCI2_04_03 a skos:Concept ;
+    dc:identifier "10통과2-04-03" ;
+    skos:prefLabel "신재생 에너지 활용" ;
+    dc:description "신재생 에너지의 종류와 특징을 이해하고 지속 가능한 발전을 위한 에너지 활용 방안을 제안한다." ;
+    skos:broader ex:Subject_Science .
+
+ex:Standard_10MAT1_04_01 a skos:Concept ;
+    dc:identifier "10공수1-04-01" ;
+    skos:prefLabel "행렬의 뜻과 연산" ;
+    dc:description "행렬의 뜻을 알고, 두 행렬의 덧셈, 뺄셈, 실수배를 할 수 있다." ;
+    skos:broader ex:Subject_Math .
+
+ex:Standard_10ENG2_05_02 a skos:Concept ;
+    dc:identifier "10영2-05-02" ;
+    skos:prefLabel "디지털 도구 활용 및 윤리" ;
+    dc:description "디지털 도구를 활용하여 필요한 정보를 검색하고 이를 윤리적으로 활용한다." ;
+    skos:broader ex:Subject_English .
+
+# --- 온라인 학습 자원 매칭 (Learning Resources) ---
+
+res:EBS_KOR_CriticalReading a schema:CreativeWork ;
+    schema:name "EBS 고등 공통국어 - 비판적 읽기와 논증" ;
+    schema:url <https://www.ebsi.co.kr/> ;
+    schema:educationalAlignment ex:Standard_10KOR1_02_01 ;
+    dc:publisher "EBS(한국교육방송공사)" .
+
+res:Edunet_Social_Climate a schema:CreativeWork ;
+    schema:name "에듀넷 T-Clear: 기후 변화와 에너지 문제 프로젝트" ;
+    schema:url <https://www.edunet.net/nedu/main/mainForm.do> ;
+    schema:educationalAlignment ex:Standard_10SOC1_03_03 ;
+    dc:publisher "KERIS(한국교육학술정보원)" .
+
+res:ScienceAll_RenewableEnergy a schema:CreativeWork ;
+    schema:name "사이언스올: 지속 가능한 미래를 위한 신재생 에너지 탐구" ;
+    schema:url <https://www.scienceall.com/> ;
+    schema:educationalAlignment ex:Standard_10SCI2_04_03 ;
+    dc:publisher "KOFAC(한국과학창의재단)" .
+
+res:EBS_Math_Matrix a schema:CreativeWork ;
+    schema:name "EBS 공통수학1: 새로운 시작, 행렬의 기초" ;
+    schema:url <https://www.ebsi.co.kr/> ;
+    schema:educationalAlignment ex:Standard_10MAT1_04_01 ;
+    dc:publisher "EBS(한국교육방송공사)" .
+
+res:Edunet_English_DigitalLiteracy a schema:CreativeWork ;
+    schema:name "영어권 문화와 디지털 리터러시 활용 가이드" ;
+    schema:url <https://www.edunet.net/> ;
+    schema:educationalAlignment ex:Standard_10ENG2_05_02 ;
+    dc:publisher "KERIS(한국교육학술정보원)" .
